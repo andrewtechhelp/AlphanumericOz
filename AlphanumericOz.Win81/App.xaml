@@ -1,0 +1,22 @@
+﻿<Application
+    x:Class="AlphanumericOz.Win81.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AlphanumericOz.Win81"
+    xmlns:valueConverters="using:AlphanumericOz.Win81.ValueConverters">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- 
+                    Styles that define common aspects of the platform look and feel
+                    Required by Visual Studio project and item templates
+                 -->
+                <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <valueConverters:Win81ImagePathValueConverter x:Key="Win81ImagePath"/>
+            <valueConverters:ItemClickedConverter x:Name="ItemClickedConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
